@@ -1,4 +1,12 @@
 [] Register a user
+---[] validate the request
+---[] authorize the request
+---[] check if user is in the database already
+---[] prepare model 
+---[] store in database 
+---[] generate jwt token 
+---[] send response
+
 [] Login a user
 [] who am I
 [] add new product
