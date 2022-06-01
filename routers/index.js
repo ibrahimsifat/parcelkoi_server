@@ -2,12 +2,12 @@ const express = require("express");
 const {
   addUser,
   getUser,
-  getUserByUsername,
+  getUserByID,
 } = require("../controllers/auth/register");
 const router = express.Router();
 
 // get user by id
-router.get("/user/:username", getUserByUsername);
+router.get("/user/:id", getUserByID);
 
 // get all user
 router.get("/user", getUser);

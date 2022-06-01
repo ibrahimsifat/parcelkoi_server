@@ -1,6 +1,7 @@
 // internal import
 const UserModel = require("../../models/UserModel");
 const createError = require("http-errors");
+const CustomErrorHandler = require("../../services/customErrorHandler");
 
 // get user
 const getUser = async (req, res) => {
@@ -17,9 +18,9 @@ const getUser = async (req, res) => {
 };
 
 // get user by username
-const getUserByUsername = async (req, res) => {
-  const username = req.params.username;
-  const user = await UserModel.find({ username: username });
+const getUserByID = async (req, res) => {
+  const userId = req.params.id;
+  const user = await UserModel.find({ _id: userId });
   res.status(200).json(user);
 };
 // add user
@@ -42,4 +43,4 @@ const addUser = async (req, res) => {
   });
 };
 
-module.exports = { addUser, getUser, getUserByUsername };
+module.exports = { addUser, getUser, getUserByID };
