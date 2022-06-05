@@ -1,8 +1,9 @@
 class CustomErrorHandler extends Error {
   constructor(status, message) {
     this.status = status;
-    this.message = message;
+    this.massage = massage;
   }
+
   customError(status, message) {
     return new CustomErrorHandler(status, message);
   }
